@@ -40,6 +40,9 @@ import rx.schedulers.Schedulers;
 import tr.xip.errorview.ErrorView;
 import tr.xip.errorview.RetryListener;
 
+/**
+ * 通过xml 直接配置到MainActivity中
+ */
 public class ImagesFragment extends Fragment {
 
     public static SparseArray<Bitmap> photoCache = new SparseArray<>(1);
@@ -64,10 +67,12 @@ public class ImagesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_images, container, false);
+        /*recycler*/
         mImageRecycler = (RecyclerView) rootView.findViewById(R.id.fragment_last_images_recycler);
         mImagesProgress = (ProgressBar) rootView.findViewById(R.id.fragment_images_progress);
         mImagesErrorView = (ErrorView) rootView.findViewById(R.id.fragment_images_error_view);
 
+     // v7 包自带的Recycler适配器
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mImageRecycler.setLayoutManager(gridLayoutManager);
         mImageRecycler.setOnTouchListener(new View.OnTouchListener() {
@@ -93,6 +98,9 @@ public class ImagesFragment extends Fragment {
                 .subscribe(observer);
     }
 
+    /**
+     * 获取图片
+     */
     private void fetchFeaturedImages() {
         mImagesProgress.setVisibility(View.VISIBLE);
         mImageRecycler.setVisibility(View.GONE);

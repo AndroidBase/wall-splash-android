@@ -8,7 +8,8 @@
     >
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/activity_main_toolbar"
+        android:id="
+        @+id/activity_main_toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:minHeight="?attr/actionBarSize"

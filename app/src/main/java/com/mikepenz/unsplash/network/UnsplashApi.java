@@ -9,6 +9,9 @@ import retrofit.converter.GsonConverter;
 import retrofit.http.GET;
 import rx.Observable;
 
+/**
+ * 接口
+ */
 public class UnsplashApi {
     private static final String ENDPOINT = "http://mikepenz.com/android/unsplash";
     private final UnsplashService mWebService;

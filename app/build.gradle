@@ -54,21 +54,28 @@ android {
 }
 
 dependencies {
+    /*图片加载*/
     compile 'com.koushikdutta.ion:ion:2.0.5'
+    /*以下五个不解释*/
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:palette-v7:21.0.3'
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile 'com.android.support:cardview-v7:21.0.3'
     compile 'com.android.support:recyclerview-v7:21.0.3'
 
+    /*接口封装类库*/
     compile 'com.squareup.retrofit:retrofit:1.9.0'
+    /*图片处理*/
     compile 'com.squareup.picasso:picasso:2.4.0'
+
     compile 'io.reactivex:rxandroid:0.24.0'
-
+    /*圆形进度条*/
     compile 'com.github.lzyzsd:circleprogress:1.0.1@aar'
+    /*错误提示页*/
     compile 'com.github.xiprox.errorview:library:1.0.0'
-
+    /*字体系图标库*/
     compile 'com.mikepenz.iconics:library:0.7.1@aar'
+    /*创建Activity的库*/
     compile('com.mikepenz.aboutlibraries:library:4.5.2@aar') {
         transitive = true
     }
