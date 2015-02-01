@@ -91,18 +91,19 @@ public class DetailActivity extends ActionBarActivity {
         mWallpaperWidth = WallpaperManager.getInstance(DetailActivity.this).getDesiredMinimumWidth();
         mWallpaperHeight = WallpaperManager.getInstance(DetailActivity.this).getDesiredMinimumHeight();
 
-        // Recover items from the intent
+        // Recover items from the intent    从intent 中获取图片的位置
         final int position = getIntent().getIntExtra("position", 0);
         mSelectedImage = (Image) getIntent().getSerializableExtra("selected_image");
-
+        /*生成四个图标*/
         mDrawablePhoto = new IconicsDrawable(this, FontAwesome.Icon.faw_photo).color(Color.WHITE).sizeDp(24);
         mDrawableClose = new IconicsDrawable(this, FontAwesome.Icon.faw_close).color(Color.WHITE).sizeDp(24);
         mDrawableSuccess = new IconicsDrawable(this, FontAwesome.Icon.faw_check).color(Color.WHITE).sizeDp(24);
         mDrawableError = new IconicsDrawable(this, FontAwesome.Icon.faw_exclamation).color(Color.WHITE).sizeDp(24);
 
+        /*标题*/
         mTitlesContainer = findViewById(R.id.activity_detail_titles);
 
-        // Fab progress
+        // Fab progress 圆形进度条
         mFabProgress = (DonutProgress) findViewById(R.id.activity_detail_progress);
         mFabProgress.setMax(100);
         mFabProgress.setScaleX(0);
