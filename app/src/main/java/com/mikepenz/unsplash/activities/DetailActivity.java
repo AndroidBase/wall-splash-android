@@ -127,7 +127,7 @@ public class DetailActivity extends ActionBarActivity {
         mFabShareButton.setImageDrawable(new IconicsDrawable(this, FontAwesome.Icon.faw_share).color(Color.WHITE).sizeDp(16));
         mFabShareButton.setOnClickListener(onFabShareButtonListener);
 
-        // Title container
+        // Title container //标题
         mTitleContainer = findViewById(R.id.activity_detail_title_container);
         Utils.configuredHideYView(mTitleContainer);
 
